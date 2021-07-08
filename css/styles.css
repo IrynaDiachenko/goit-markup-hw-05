@@ -13,6 +13,7 @@
     --primary-bg-color: #fff;  /*cлоновая кость*/
     --clients-bg-color: #E5E5E5;
     --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+    --logo-color: #000;
 }
 
 
@@ -286,6 +287,7 @@ transition: opasity 250ms var(--cubic); */
 
     background-color: var(--main-color);
     
+    
 }
 
 .close {
@@ -301,6 +303,10 @@ transition: opasity 250ms var(--cubic); */
     padding: 0;
 }
 
+/* .btn-close {
+    width: 11px;
+    fill: var(--logo-color);
+} */
 
 
 
@@ -413,8 +419,42 @@ div, section, p, h2{
 }
 
 .service-item {
+    position: relative;
     flex-basis: calc(100% / 3 - var(--card-set-gap));
     margin-right: var(--card-set-gap);
+}
+
+
+
+/* SERVISE DESC */
+
+.service-item {
+    position: relative;
+}
+
+.service-desc {
+       position: absolute;
+       width: 370px;
+       height: 70px;
+       background-color: rgba(47, 48, 58, 0.8);
+       left: 0;
+       bottom: 0;
+       text-align: center;
+       padding-top: 27px;
+  
+}
+
+.service-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-color);
+
 }
 
 
