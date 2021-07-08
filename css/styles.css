@@ -269,9 +269,9 @@ transition: opasity 250ms var(--cubic); */
 }
 
     .backdrop.is-hidden {
-        visibility: hidden;
-opacity: 0;
-pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal {
