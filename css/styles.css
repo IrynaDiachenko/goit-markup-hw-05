@@ -12,6 +12,7 @@
     --card-set-gap: 30px;
     --primary-bg-color: #fff;  /*cлоновая кость*/
     --clients-bg-color: #E5E5E5;
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -150,7 +151,10 @@ align-items: center;
 }
 
 .test-link {
-    display: block;
+    position: relative;
+    display: inline-block;
+transition: color 250ms var(--cubic);
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -159,6 +163,38 @@ align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
+.current-link,
+.test-link:active { 
+    color: var(--color-link);
+}
+
+/* Studia-band */
+
+.test-link.current-link::after {
+position: absolute;
+
+bottom: 0;
+
+content: '';
+display: block;
+width: 48px;
+height: 4px;
+border-radius: 2px;
+
+background-color: var(--color-link);
+/* opacity: 1;
+transition: opasity 250ms var(--cubic); */
+}
+
+
+
+/* .a:hover::after {
+    opacity: 1;
+} */
+
+
+
 
 /*MAIN*/
  
@@ -218,6 +254,57 @@ align-items: center;
 
     cursor: pointer;
 }
+
+
+
+/* MODAL */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+    .backdrop.is-hidden {
+        visibility: hidden;
+opacity: 0;
+pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+    padding: 15px;
+
+    background-color: var(--main-color);
+    
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+
+
+
 
 .section {
     padding-top: 94px;
@@ -665,5 +752,7 @@ cursor: pointer;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+
 
 
