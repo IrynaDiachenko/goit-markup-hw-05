@@ -36,9 +36,16 @@ body {
     margin-right: 93px;
     /*margin-left: 200px;*/
     
+    
 }
+
 .logo-accent {
     color: var(--color-link);
+}
+
+.logo-animation {
+    animation-duration: 1000ms;
+    /* animation-iteration-count: 2; */
 }
 
 h1,
@@ -299,30 +306,24 @@ transition: opasity 250ms var(--cubic);
 }
 
 .close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-
-    
-    cursor: pointer;
-
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: transparent;
-    padding: 0;
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box; */
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
 }
 
-/* .btn-close {
+.btn-close {
     width: 11px;
     fill: var(--logo-color);
-} */
+}
 
 
 
