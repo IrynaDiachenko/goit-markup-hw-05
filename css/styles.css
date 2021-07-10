@@ -288,7 +288,7 @@ transition: opasity 250ms var(--cubic);
     /* pointer-events: auto; */
 
     /* transition: opasity 500ms var(--cubic); */
-    transform: translate(-50%, -50%) scale(1);
+   
     transition: opacity 500ms var(--cubic),
     visibility 500ms var(--cubic);
 }
@@ -309,6 +309,8 @@ transition: opasity 250ms var(--cubic);
     padding: 15px;
 
     background-color: var(--main-color);
+
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .close {
@@ -478,6 +480,9 @@ div, section, p, h2{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
