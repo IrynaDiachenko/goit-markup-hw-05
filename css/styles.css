@@ -1,5 +1,4 @@
-
- :root {
+:root {
     --text-color: #212121;  /*коричневый*/
     --color-link: #2196F3;  /*голубой*/
     --color-tipe: #757575;  /*серый*/
@@ -132,12 +131,11 @@ header {
 
 .header-adress {
 color: var(--color-tipe);
-
+font-size: 14px;
 font-weight: 500;
-line-height: 14px;
- line-height: 1.14;
- letter-spacing: 0.02em;
- margin-left: auto;
+line-height: 1.14;
+letter-spacing: 0.02em;
+margin-left: auto;
 
 display: flex;
 align-items: center;
@@ -146,8 +144,10 @@ align-items: center;
 
 
 .adress {
-    /*display: flex;*/
-    margin-left: auto;
+margin-left: auto;
+
+color: var(--text-color);
+
 }
 
 .test-link:hover,
@@ -283,12 +283,17 @@ transition: opasity 250ms var(--cubic);
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
 
-    transition: opasity 500ms var(--cubic);
-
     opacity: 1;
+    visibility: visible;
+    /* pointer-events: auto; */
+
+    /* transition: opasity 500ms var(--cubic); */
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 500ms var(--cubic),
+    visibility 500ms var(--cubic);
 }
 
-    .backdrop.is-hidden {
+.backdrop.is-hidden{
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -304,11 +309,6 @@ transition: opasity 250ms var(--cubic);
     padding: 15px;
 
     background-color: var(--main-color);
-
-
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 500ms var(--timing-function),
-    visibility 500ms var(--timing-function);
 }
 
 .close {
@@ -342,7 +342,7 @@ transition: opasity 250ms var(--cubic);
 
 .section-features {
     padding-top: 94px;
-    /* padding-bottom: 94px; */ */
+    /* padding-bottom: 94px; */
 }
 
 div, section, p, h2{
@@ -457,14 +457,14 @@ div, section, p, h2{
 }
 
 .service-desc {
-       position: absolute;
-       width: 370px;
-       height: 70px;
-       background-color: rgba(47, 48, 58, 0.8);
-       left: 0;
-       bottom: 0;
-       text-align: center;
-       padding-top: 27px;
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    padding-top: 27px;
   
 }
 
@@ -643,7 +643,7 @@ justify-content: center;
 }
 
 .footer-logo-accent{
-    color
+    color: var(--main-color)
 }
 /* address {
     display: block;
@@ -849,9 +849,7 @@ overflow: hidden;
 }
 
 .link {
-    
     display: block;
-   
 }
 
 .picture-item-wrapper {
